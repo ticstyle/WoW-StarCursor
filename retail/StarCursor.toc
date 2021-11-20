@@ -1,9 +1,9 @@
-## Interface: 80205
+## Interface: 90105
 ## Title: StarCursor |cff9966ff<duality.ps>
 ## Notes: Makes it easy to keep track of where your cursor is located.
 ## Author: duality.ps @ Ticstyle
-## Version: r6-retail
-## X-Curse-Packaged-Version: r6-retail
+## Version: r10-retail
+## X-Curse-Packaged-Version: r10-retail
 ## X-Curse-Project-Name: StarCursor
 ## X-Curse-Project-ID: starcursor
 ## X-Curse-Repository-ID: wow/starcursor/mainline

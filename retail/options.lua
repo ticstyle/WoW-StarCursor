@@ -21,7 +21,7 @@ hooksecurefunc("InterfaceOptionsFrame_OpenToCategory",InterfaceOptionsFrame_Open
         button:SetPoint("TOPLEFT", 10, -48)
         button:SetScript('OnClick', function()
             
-            print("StarCursor: Options are comming soon. ")
+            print("StarCursor: Options are planned for future updates. ")
         end)
 
 		-- Slash Handler

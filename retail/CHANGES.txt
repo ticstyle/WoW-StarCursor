@@ -1,3 +1,17 @@
+r10
+* TOC update for Retail patch 9.1.5
+* Bygfix for frozen animation
+
+r9
+* TOC update for Retail patch 9.0.2
+
+r8
+* TOC update for Retail patch 9.0.1
+* Updated libraries
+
+r7
+* Client version update
+
 r6
 * Client version update
 

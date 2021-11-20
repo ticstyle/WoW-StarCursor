@@ -8,7 +8,20 @@ texture:SetAlpha(0.5);
 local x = 0;
 local y = 0;
 local speed = 0;
+
 local function OnUpdate(_, elapsed)
+  --Somehow speed or something else is getting to -nan, reset if so (temporary fix by raymar_of_brovaria)
+  if speed + 1 == speed then
+    speed = 0
+  end
+  if x + 1 == x then
+    x = 0
+  end
+  if y + 1 == y then
+    y = 0
+  end
+  --end of temp fix
+--local function OnUpdate(_, elapsed)
   local dX = x;
   local dY = y;
   x, y = GetCursorPosition();
