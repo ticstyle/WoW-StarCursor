@@ -1,2 +1,9 @@
+r11
+* Fix for texture speed
+* Fix for options file calling non existent function
+
+r7-10
+*Skipped releases to allin version numbers with the retail version
+
 r6
 * Made standalone for Classic
