@@ -1,31 +1,31 @@
-local L = LibStub("AceLocale-3.0"):GetLocale("StarCursor", false)
+-- Slash command to change color
+SLASH_COLORCHANGE1 = "/starcolour"
+SlashCmdList["COLORCHANGE"] = function(msg)
+    local r, g, b = strsplit(" ", msg)
+    r, g, b = tonumber(r), tonumber(g), tonumber(b)
+    if r and g and b then
+        local alpha = StarCursor.texture:GetAlpha()
+        StarCursor.texture:SetVertexColor(r, g, b, alpha)
+        StarCursorSettings.r, StarCursorSettings.g, StarCursorSettings.b = r, g, b
+    end
+end
 
-hooksecurefunc("InterfaceOptionsFrame_OpenToCategory",InterfaceOptionsFrame_OpenToCategory)
+-- Slash command to adjust alpha
+SLASH_ALPHACHANGE1 = "/staralpha"
+SlashCmdList["ALPHACHANGE"] = function(msg)
+    local alpha = tonumber(msg)
+    if alpha and alpha >= 0 and alpha <= 1 then
+        StarCursor.texture:SetAlpha(alpha)
+        StarCursorSettings.alpha = alpha
+    end
+end
 
--- Blizzard options frame
-        local panel = CreateFrame("Frame", "StarCursorBlizzOptions")
-        panel.name = "StarCursor"
-        InterfaceOptions_AddCategory(panel)
- 
-
-        local fs = panel:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
-        fs:SetPoint("TOPLEFT", 10, -15)
-        fs:SetPoint("BOTTOMRIGHT", panel, "TOPRIGHT", 10, -45)
-        fs:SetJustifyH("LEFT")
-        fs:SetJustifyV("TOP")
-        fs:SetText("StarCursor")
-
-        local button = CreateFrame("Button", nil, panel, "UIPanelButtonTemplate")
-        button:SetText(L['Configure'])
-        button:SetWidth(128)
-        button:SetPoint("TOPLEFT", 10, -48)
-        button:SetScript('OnClick', function()
-            
-            print("StarCursor: Options are comming soon. ")
-        end)
-
-		-- Slash Handler
-		SLASH_STARCURSOR1 = "/sc"
-		SlashCmdList.STARCURSOR = function(msg)
-	InterfaceOptionsFrame_OpenToCategory(StarCursorBlizzOptions)
+-- Slash command for help
+SLASH_HELP1 = "/starcursor"
+SlashCmdList["HELP"] = function()
+    print("StarCursor:")
+    print("/starcolour <r> <g> <b> - Change texture color (0-1)")
+    print("/starcolour 1 1 1 - For white")
+    print("/staralpha <alpha> - Change texture alpha (0-1)")
+    print("/staralpha 1 - For full alpha")
 end
