@@ -1,5 +1,5 @@
 ## Interface: 11503
-## Title: StarCursor
+## Title: StarCursor |cff9966ff<dualityps>
 ## Notes: Makes it easy to keep track of where your cursor is located.
 ## Author: dualityps
 ## Version: r11-classic
