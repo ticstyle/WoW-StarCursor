@@ -1,3 +1,6 @@
+r12
+* Smaller fixes
+
 r11
 * Fix for texture speed
 * Fix for options file calling non existent function
