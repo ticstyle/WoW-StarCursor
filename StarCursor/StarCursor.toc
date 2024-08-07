@@ -1,7 +1,7 @@
 ## Interface: 110000
 ## Title: StarCursor |cff9966ff<dualityps>
 ## Notes: Makes it easy to keep track of where your cursor is located.
-## Author: Original: dualityps New: x2infinity
+## Author: dualityps
 ## Version: r11-retail
 ## X-Curse-Packaged-Version: r11-retail
 ## X-Curse-Project-Name: StarCursor
