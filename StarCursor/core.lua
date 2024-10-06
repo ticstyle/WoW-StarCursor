@@ -1,18 +1,18 @@
-StarCursor = StarCursor or {}
-
 -- Create StarCursor
+local StarCursor = StarCursor or {}
 local frame = CreateFrame("Frame", nil, UIParent);
-frame:SetFrameStrata("TOOLTIP");
+frame:SetFrameStrata("FULLSCREEN_DIALOG"); -- The strata as FULLSCREEN_DIALOG or DIALOG
 StarCursor.texture = frame:CreateTexture();
 StarCursor.texture:SetTexture([[Interface\Cooldown\star4]]);
 StarCursor.texture:SetBlendMode("ADD");
+StarCursor.texture:Show(); -- Ensure the texture is not hidden by default
 
-local frame = CreateFrame("Frame")
-frame:RegisterEvent("ADDON_LOADED")
-frame:RegisterEvent("PLAYER_LOGOUT")
+-- Event handling
+local eventFrame = CreateFrame("Frame")
+eventFrame:RegisterEvent("ADDON_LOADED")
+eventFrame:RegisterEvent("PLAYER_LOGOUT")
 
-
-frame:SetScript("OnEvent", function(self, event, arg1)
+eventFrame:SetScript("OnEvent", function(self, event, arg1)
   if event == "ADDON_LOADED" and arg1 == "StarCursor" then
     -- Print slash commands
     print("/starcursor - for options")
@@ -37,27 +37,38 @@ frame:SetScript("OnEvent", function(self, event, arg1)
   end
 end)
 
-
--- Default Texture Values
-local x, y, speed = 0, 0, 0;
+-- Constants
 local MAX_SPEED = 1024;
 local SPEED_DECAY = 2048;
 local SIZE_MODIFIER = 6;
 local MIN_SIZE = 16;
 
-local function isNan(value)
-  return value ~= value;
+-- Initialize variables
+local x, y, speed = 0, 0, 0;
+x, y = GetCursorPosition(); -- Initialize with current cursor position
+speed = 0; -- Initialize speed to 0
+
+-- Function to check for NaN values
+local function isnan(value)
+  return value ~= value
 end
 
-colorPickerOpen = false
-
+-- OnUpdate function
+local lastUpdate = 0
 local function OnUpdate(_, elapsed)
-  if isNan(speed) then speed = 0; end
-  if isNan(x) then x = 0; end
-  if isNan(y) then y = 0; end
+  lastUpdate = lastUpdate + elapsed
+  if lastUpdate < 0.01 then return end -- Update every 0.01 seconds
+  lastUpdate = 0
+
+  if isnan(speed) then speed = 0; end
+  if isnan(x) then x = 0; end
+  if isnan(y) then y = 0; end
 
   local prevX, prevY = x, y;
-  x, y = GetCursorPosition();
+  local cursorX, cursorY = GetCursorPosition();
+  local scale = UIParent:GetEffectiveScale();
+  x = cursorX / scale;
+  y = cursorY / scale;
   local dX, dY = x - prevX, y - prevY;
 
   local distance = math.sqrt(dX * dX + dY * dY);
@@ -66,10 +77,9 @@ local function OnUpdate(_, elapsed)
 
   local size = speed / SIZE_MODIFIER - MIN_SIZE;
   if size > 0 then
-    local scale = UIParent:GetEffectiveScale();
     StarCursor.texture:SetHeight(size);
     StarCursor.texture:SetWidth(size);
-    StarCursor.texture:SetPoint("CENTER", UIParent, "BOTTOMLEFT", (x + dX) / scale, (y + dY) / scale);
+    StarCursor.texture:SetPoint("CENTER", UIParent, "BOTTOMLEFT", x, y);
     StarCursor.texture:Show();
   else
     StarCursor.texture:Hide();
