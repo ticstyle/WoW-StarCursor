@@ -1,5 +1,6 @@
 r14
 * TOC update for Retail patch 11.2.0
+* Optimizing and improving the code
 
 r13
 * Fixing animation not showing for some users
