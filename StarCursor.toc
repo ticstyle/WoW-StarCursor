@@ -1,8 +1,8 @@
-## Interface: 120001, 11508
+## Interface: 120005, 11508
 ## Title: StarCursor |cff9966ff<dualityps>
 ## Notes: Makes it easy to keep track of where your cursor is located.
 ## Author: dualityps
-## Version: v4.2.5
+## Version: v4.2.6
 ## DefaultState: enabled
 ## SavedVariables: StarCursorDB
 

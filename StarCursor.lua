@@ -144,12 +144,7 @@ end)
 -- 6. Color Picker
 local function OpenColorPicker()
     local function ColorCallback()
-        local r, g, b
-        if ColorPickerFrame.GetColorRGB then
-            r, g, b = ColorPickerFrame:GetColorRGB()
-        else
-            r, g, b = ColorPickerFrame:GetColorRGB()
-        end
+        local r, g, b = ColorPickerFrame:GetColorRGB()
         StarCursorDB.r, StarCursorDB.g, StarCursorDB.b = r, g, b
         UpdateVisuals()
     end
@@ -215,54 +210,46 @@ local function InitOptions()
     iconHeader:SetPoint("TOPLEFT", alphaSlider, "BOTTOMLEFT", 0, -25)
     iconHeader:SetText("Cursor Icon")
 
-    -- ICON DROPDOWN
-    local iconDropdown = CreateFrame("Frame", "StarCursorIconDropdown", panel, "UIDropDownMenuTemplate")
+    -- ICON DROPDOWN 
+    local iconDropdown = CreateFrame("DropdownButton", "StarCursorIconDropdown", panel, "WowStyle1DropdownTemplate")
     iconDropdown:SetPoint("TOPLEFT", iconHeader, "BOTTOMLEFT", -15, -10)
-    UIDropDownMenu_SetWidth(iconDropdown, 150)
-    UIDropDownMenu_SetText(iconDropdown, StarCursorDB.texture or "Star (Default)")
+    iconDropdown:SetWidth(150) 
 
-    UIDropDownMenu_Initialize(iconDropdown, function(self, level, menuList)
-        local info = UIDropDownMenu_CreateInfo()
-        for i, data in ipairs(textureList) do
-            info.text = data.name
-            info.value = data.name
-            info.icon = data.path
-            info.checked = (StarCursorDB.texture == data.name)
-            info.func = function(self)
-                StarCursorDB.texture = self.value
-                UIDropDownMenu_SetText(iconDropdown, self.value)
-                currentVisualScale = StarCursorDB.scale
-                UpdateVisuals()
-            end
-            UIDropDownMenu_AddButton(info)
+    iconDropdown:SetupMenu(function(dropdown, rootDescription)
+        for _, data in ipairs(textureList) do
+            rootDescription:CreateRadio(
+                data.name,
+                function() return StarCursorDB.texture == data.name end,
+                function()
+                    StarCursorDB.texture = data.name
+                    currentVisualScale = StarCursorDB.scale
+                    UpdateVisuals()
+                end
+            )
         end
     end)
 
-    -- TRAIL HEADER (NEW)
+    -- TRAIL HEADER (Modernized)
     local trailHeader = panel:CreateFontString(nil, "ARTWORK", "GameFontNormal")
     trailHeader:SetPoint("TOPLEFT", iconDropdown, "BOTTOMLEFT", 15, -20)
     trailHeader:SetText("Trail Style")
 
     -- TRAIL DROPDOWN
-    local trailDropdown = CreateFrame("Frame", "StarCursorTrailDropdown", panel, "UIDropDownMenuTemplate")
+    local trailDropdown = CreateFrame("DropdownButton", "StarCursorTrailDropdown", panel, "WowStyle1DropdownTemplate")
     trailDropdown:SetPoint("TOPLEFT", trailHeader, "BOTTOMLEFT", -15, -10)
-    UIDropDownMenu_SetWidth(trailDropdown, 150)
-    UIDropDownMenu_SetText(trailDropdown, StarCursorDB.trailTexture or "Match Cursor")
+    trailDropdown:SetWidth(150)
 
-    UIDropDownMenu_Initialize(trailDropdown, function(self, level, menuList)
-        local info = UIDropDownMenu_CreateInfo()
-        for i, data in ipairs(trailTextureList) do
-            info.text = data.name
-            info.value = data.name
-            if data.path ~= "MATCH" then info.icon = data.path end
-            info.checked = (StarCursorDB.trailTexture == data.name)
-            info.func = function(self)
-                StarCursorDB.trailTexture = self.value
-                UIDropDownMenu_SetText(trailDropdown, self.value)
-                currentVisualScale = StarCursorDB.scale
-                UpdateVisuals()
-            end
-            UIDropDownMenu_AddButton(info)
+    trailDropdown:SetupMenu(function(dropdown, rootDescription)
+        for _, data in ipairs(trailTextureList) do
+            rootDescription:CreateRadio(
+                data.name,
+                function() return StarCursorDB.trailTexture == data.name end,
+                function()
+                    StarCursorDB.trailTexture = data.name
+                    currentVisualScale = StarCursorDB.scale
+                    UpdateVisuals()
+                end
+            )
         end
     end)
     
@@ -292,8 +279,8 @@ local function InitOptions()
         scaleSlider:SetValue(defaultSettings.scale)
         alphaSlider:SetValue(defaultSettings.alpha)
         
-        UIDropDownMenu_SetText(iconDropdown, defaultSettings.texture)
-        UIDropDownMenu_SetText(trailDropdown, defaultSettings.trailTexture)
+        iconDropdown:GenerateMenu()
+        trailDropdown:GenerateMenu()
         
         print("|cFF00FF00StarCursor:|r Reset complete.")
         UpdateVisuals()
