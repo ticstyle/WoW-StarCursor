@@ -19,6 +19,7 @@ local currentTexturePath = "Interface\\Cooldown\\star4"
 local textureList = {
     {name="Star (Default)", path="Interface\\Cooldown\\star4"},
     {name="Ring", path="Interface\\Cooldown\\ping4"},
+    {name="Dot", path="Interface\\COMMON\\Indicator-Gray"},
 }
 
 -- Trail Style List
@@ -26,7 +27,7 @@ local trailTextureList = {
     {name="Match Cursor", path="MATCH"},
     {name="Star", path="Interface\\Cooldown\\star4"},
     {name="Ring", path="Interface\\Cooldown\\ping4"},
-    {name="Spot", path="Interface\\COMMON\\Indicator-Gray"},
+    {name="Dot", path="Interface\\COMMON\\Indicator-Gray"},
 }
 
 local function GetTexturePath(name)
