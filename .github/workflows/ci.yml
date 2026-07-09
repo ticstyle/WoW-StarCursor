@@ -1,0 +1,27 @@
+name: Code Quality Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 1. Check code formating
+      - name: Check formatting with StyLua
+        uses: JohnnyMorganz/stylua-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          args: --check .
+
+      # 2. Check against bugs/syntaxerrors
+      - name: Lua Linter (Luacheck)
+        uses: lunarmodules/luacheck@v1
+        with:
+          args: --std wow .
