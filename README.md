@@ -1,6 +1,13 @@
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-
 # StarCursor
+
+<!-- Badges -->
+[![CI Status](https://img.shields.io/github/actions/workflow/status/ticstyle/WoW-StarCursor/ci.yml?style=for-the-badge&label=CI&logo=github)](https://github.com/ticstyle/WoW-StarCursor/actions/workflows/ci.yml)
+[![Latest Release](https://img.shields.io/github/v/release/ticstyle/WoW-StarCursor?style=for-the-badge&color=blue)](https://github.com/ticstyle/WoW-StarCursor/releases)
+[![CurseForge Downloads](https://img.shields.io/curseforge/dt/starcursor?style=for-the-badge&color=green&label=CurseForge)](https://www.curseforge.com/wow/addons/starcursor)
+![WoW Version](https://img.shields.io/badge/WoW-Retail%20%7C%20Classic-FFB100?style=for-the-badge)
+[![Code Style: StyLua](https://img.shields.io/badge/Code%20Style-StyLua-000000?style=for-the-badge&logo=lua)](https://github.com/JohnnyMorganz/StyLua)
+[![Issues](https://img.shields.io/github/issues/ticstyle/WoW-StarCursor?style=for-the-badge&color=orange)](https://github.com/ticstyle/WoW-StarCursor/issues)
+[![License](https://img.shields.io/github/license/ticstyle/WoW-StarCursor?style=for-the-badge)](https://github.com/ticstyle/WoW-StarCursor/blob/main/LICENSE)
 
 An extremely lightweight World of Warcraft addon designed to make your in-game cursor much easier to locate during intense combat or chaotic encounters. 
 
@@ -40,7 +47,7 @@ The easiest way to install and keep StarCursor updated automatically is through 
 👉 **[Download StarCursor on CurseForge](https://www.curseforge.com/wow/addons/starcursor)**
 
 ### The Manual Way
-1. Download the latest release `.zip` file from the [GitHub Releases](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/releases) page.
+1. Download the latest release `.zip` file from the [GitHub Releases](https://github.com/ticstyle/WoW-StarCursor/releases) page.
 2. Extract the contents of the archive.
 3. Move the extracted `StarCursor` folder into your WoW AddOns directory:
    * **Retail:** `World of Warcraft/_retail_/Interface/AddOns/`
