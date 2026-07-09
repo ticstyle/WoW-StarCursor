@@ -1,3 +1,5 @@
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
 # StarCursor
 
 An extremely lightweight World of Warcraft addon designed to make your in-game cursor much easier to locate during intense combat or chaotic encounters. 
