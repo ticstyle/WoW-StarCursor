@@ -3,7 +3,7 @@
 <!-- Badges -->
 [![CI Status](https://img.shields.io/github/actions/workflow/status/ticstyle/WoW-StarCursor/ci.yml?style=for-the-badge&label=CI&logo=github)](https://github.com/ticstyle/WoW-StarCursor/actions/workflows/ci.yml)
 [![Latest Release](https://img.shields.io/github/v/release/ticstyle/WoW-StarCursor?style=for-the-badge&color=blue)](https://github.com/ticstyle/WoW-StarCursor/releases)
-[![CurseForge Downloads](https://img.shields.io/curseforge/dt/starcursor?style=for-the-badge&color=green&label=CurseForge)](https://www.curseforge.com/wow/addons/starcursor)
+[![CurseForge Downloads](https://img.shields.io/curseforge/dt/102286?style=for-the-badge&color=green&label=CurseForge)](https://www.curseforge.com/wow/addons/starcursor)
 ![WoW Version](https://img.shields.io/badge/WoW-Retail%20%7C%20Classic-FFB100?style=for-the-badge)
 [![Code Style: StyLua](https://img.shields.io/badge/Code%20Style-StyLua-000000?style=for-the-badge&logo=lua)](https://github.com/JohnnyMorganz/StyLua)
 [![Issues](https://img.shields.io/github/issues/ticstyle/WoW-StarCursor?style=for-the-badge&color=orange)](https://github.com/ticstyle/WoW-StarCursor/issues)
