@@ -24,4 +24,4 @@ jobs:
       - name: Lua Linter (Luacheck)
         uses: lunarmodules/luacheck@v1
         with:
-          args: --std wow .
+          args: .
