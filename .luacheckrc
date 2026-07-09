@@ -1,7 +1,15 @@
 -- Luacheck configuration for StarCursor
 std = "max"
 
--- Globals whose fields can be read
+-- Globals that can be read, written to, and have fields mutated
+globals = {
+	"StarCursorDB",
+	"SLASH_STARCURSOR1",
+	"SlashCmdList",
+	"ColorPickerFrame",
+}
+
+-- Read-only globals provided by the WoW API
 read_globals = {
 	"UIParent",
 	"CreateFrame",
@@ -17,18 +25,6 @@ read_globals = {
 	"WowStyle1DropdownTemplate",
 	"UIPanelButtonTemplate",
 	"_G",
-}
-
--- Globals whose fields can be mutated/written to
-mutated_globals = {
-	"SlashCmdList",
-	"ColorPickerFrame",
-}
-
--- Globals set by the addon
-globals = {
-	"StarCursorDB",
-	"SLASH_STARCURSOR1",
 }
 
 -- Ignore unused argument warnings (e.g. self in event callbacks)
