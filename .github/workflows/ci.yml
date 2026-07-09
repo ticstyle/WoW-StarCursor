@@ -18,6 +18,7 @@ jobs:
         uses: JohnnyMorganz/stylua-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          version: 2.0.2
           args: --check .
 
       # 2. Check against bugs/syntaxerrors
