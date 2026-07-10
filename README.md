@@ -25,9 +25,7 @@ An extremely lightweight World of Warcraft addon designed to make your in-game c
 
 ## 📸 Preview
 
-> 💡 **Tip:** Replace this placeholder with a short `.gif` or screenshot of the star trail in action to catch users' attention instantly!
-
-![StarCursor Showcase](https://via.placeholder.com/800x400.png?text=Add+a+cool+in-game+GIF+or+screenshot+here!)
+![StarCursor Showcase](https://media.forgecdn.net/attachments/200/421/screenshot1.png?text=Screenshot)
 
 ---
 
