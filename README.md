@@ -45,7 +45,7 @@ The easiest way to install and keep StarCursor updated automatically is through 
 👉 **[Download StarCursor on CurseForge](https://www.curseforge.com/wow/addons/starcursor)**
 
 ### The Manual Way
-1. Download the latest release `.zip` file from the [GitHub Releases](https://github.com/ticstyle/WoW-StarCursor/releases) page.
+1. Download the latest release `.zip` file from [CurseForge](https://www.curseforge.com/wow/addons/starcursor) page.
 2. Extract the contents of the archive.
 3. Move the extracted `StarCursor` folder into your WoW AddOns directory:
    * **Retail:** `World of Warcraft/_retail_/Interface/AddOns/`
