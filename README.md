@@ -1,7 +1,7 @@
 # StarCursor
 
 <!-- Badges -->
-[![CI Status](https://img.shields.io/github/actions/workflow/status/ticstyle/WoW-StarCursor/ci.yml?style=for-the-badge&label=CI&logo=github)](https://github.com/ticstyle/WoW-StarCursor/actions/workflows/ci.yml)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/ticstyle/WoW-StarCursor/pipeline.yml?style=for-the-badge&label=CI&logo=github)](https://github.com/ticstyle/WoW-StarCursor/actions/workflows/pipeline.yml)
 [![Latest Release](https://img.shields.io/github/v/release/ticstyle/WoW-StarCursor?style=for-the-badge&color=blue)](https://github.com/ticstyle/WoW-StarCursor/releases)
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/102286?style=for-the-badge&color=green&label=CurseForge)](https://www.curseforge.com/wow/addons/starcursor)
 ![WoW Version](https://img.shields.io/badge/WoW-Retail%20%7C%20Classic-FFB100?style=for-the-badge)
