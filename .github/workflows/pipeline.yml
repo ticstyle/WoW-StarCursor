@@ -24,6 +24,7 @@ jobs:
         uses: JohnnyMorganz/stylua-action@v5.0.0
         with:
           token: ${{ secrets.MY_WORKFLOW_SECRET }}
+          version: 2.0.2
           args: .
 
       # Automatically commit and push changes back if StyLua modified any files
