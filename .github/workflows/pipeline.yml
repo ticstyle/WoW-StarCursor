@@ -24,7 +24,7 @@ jobs:
         uses: JohnnyMorganz/stylua-action@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          version: 2.0.0
+          version: 2.0.2
           args: .
 
       # Automatically commit and push changes back if StyLua modified any files
