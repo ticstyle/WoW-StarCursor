@@ -21,10 +21,10 @@ jobs:
 
       # Auto-format with StyLua (modifies files in place)
       - name: Auto-format with StyLua
-        uses: JohnnyMorganz/stylua-action@v5.0.0
+        uses: JohnnyMorganz/stylua-action@v5
         with:
-          token: ${{ secrets.MY_WORKFLOW_SECRET }}
-          version: 2.0.2
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: 5.0.0
           args: .
 
       # Automatically commit and push changes back if StyLua modified any files
