@@ -1,13 +1,14 @@
 # StarCursor
 
-<!-- Badges -->
-[![CI Status](https://img.shields.io/github/actions/workflow/status/ticstyle/WoW-StarCursor/pipeline.yml?style=for-the-badge&label=CI&logo=github)](https://github.com/ticstyle/WoW-StarCursor/actions/workflows/pipeline.yml)
-[![Latest Release](https://img.shields.io/github/v/release/ticstyle/WoW-StarCursor?style=for-the-badge&color=blue)](https://github.com/ticstyle/WoW-StarCursor/releases)
-[![CurseForge Downloads](https://img.shields.io/curseforge/dt/102286?style=for-the-badge&color=green&label=CurseForge)](https://www.curseforge.com/wow/addons/starcursor)
-![WoW Version](https://img.shields.io/badge/WoW-Retail%20%7C%20Classic-FFB100?style=for-the-badge)
-[![Code Style: StyLua](https://img.shields.io/badge/Code%20Style-StyLua-000000?style=for-the-badge&logo=lua)](https://github.com/JohnnyMorganz/StyLua)
-[![Issues](https://img.shields.io/github/issues/ticstyle/WoW-StarCursor?style=for-the-badge&color=orange)](https://github.com/ticstyle/WoW-StarCursor/issues)
-[![License](https://img.shields.io/github/license/ticstyle/WoW-StarCursor?style=for-the-badge)](https://github.com/ticstyle/WoW-StarCursor/blob/main/LICENSE)
+[![Latest Release](https://img.shields.io/github/v/release/ticstyle/WoW-StarCursor?label=Release&color=blue)](https://github.com/ticstyle/WoW-StarCursor/releases)
+![WoW Version](https://img.shields.io/badge/WoW-Retail%20%7C%20Classic-FFB100)
+[![CurseForge Downloads](https://img.shields.io/curseforge/dt/102286?color=green&label=CurseForge%20downloads)](https://www.curseforge.com/wow/addons/starcursor)
+![Last Updated](https://img.shields.io/github/last-commit/ticstyle/WoW-StarCursor?path=StarCursor.toc&label=Maintained)
+[![Issues](https://img.shields.io/github/issues/ticstyle/WoW-StarCursor?color=orange&label=Issues)](https://github.com/ticstyle/WoW-StarCursor/issues)
+
+[![License](https://img.shields.io/github/license/ticstyle/WoW-StarCursor)](https://github.com/ticstyle/WoW-StarCursor/blob/main/LICENSE)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/ticstyle/WoW-StarCursor/pipeline.yml?label=CI&logo=github)](https://github.com/ticstyle/WoW-StarCursor/actions/workflows/pipeline.yml)
+[![Code Style: StyLua](https://img.shields.io/badge/Code%20Style-StyLua-787878?logo=lua)](https://github.com/JohnnyMorganz/StyLua)
 
 An extremely lightweight World of Warcraft addon designed to make your in-game cursor much easier to locate during intense combat or chaotic encounters. 
 
