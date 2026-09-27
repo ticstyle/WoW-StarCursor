@@ -1,7 +1,7 @@
 # StarCursor
 
 [![Latest Release](https://img.shields.io/github/v/release/ticstyle/WoW-StarCursor?label=Release&color=blue)](https://github.com/ticstyle/WoW-StarCursor/releases)
-![WoW Version](https://img.shields.io/badge/WoW-Retail%20%7C%20Classic-FFB100)
+![WoW Version](https://img.shields.io/badge/WoW-Retail%20%7C%20Classic%20%7C%20Forever-FFB100)
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/102286?color=green&label=CurseForge%20downloads)](https://www.curseforge.com/wow/addons/starcursor)
 ![Last Updated](https://img.shields.io/github/last-commit/ticstyle/WoW-StarCursor?path=StarCursor.toc&label=Maintained)
 [![Issues](https://img.shields.io/github/issues/ticstyle/WoW-StarCursor?color=orange&label=Issues)](https://github.com/ticstyle/WoW-StarCursor/issues)
