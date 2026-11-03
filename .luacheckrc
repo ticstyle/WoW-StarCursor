@@ -14,7 +14,6 @@ read_globals = {
 	"UIParent",
 	"CreateFrame",
 	"GetCursorPosition",
-	"UIFrameFadeOut",
 	"Settings",
 	"InterfaceOptions_AddCategory",
 	"InterfaceOptionsFrame_OpenToCategory",
