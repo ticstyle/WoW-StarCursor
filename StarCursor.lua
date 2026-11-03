@@ -1,6 +1,7 @@
 local addonName = "StarCursor"
 local baseSize = 32
 local trailSize = 20
+local trailFadeDuration = 0.5
 local optionsCategory
 
 -- Default Settings
@@ -65,6 +66,7 @@ for i = 1, 40 do
 	local t = CreateFrame("Frame", nil, UIParent)
 	t:SetSize(trailSize, trailSize)
 	t:SetFrameStrata("TOOLTIP")
+	t:SetIgnoreParentAlpha(true)
 	t.tex = t:CreateTexture(nil, "OVERLAY")
 	t.tex:SetAllPoints()
 	t:Hide()
@@ -147,12 +149,27 @@ frame:SetScript("OnUpdate", function(self, elapsed)
 		t.tex:SetBlendMode("ADD")
 
 		local startAlpha = (StarCursorDB.alpha or 1) * 0.6
+		t.startAlpha = startAlpha
+		t.fadeTimer = trailFadeDuration
 		t:SetAlpha(startAlpha)
 		t:Show()
 
-		UIFrameFadeOut(t, 0.5, startAlpha, 0)
-
 		table.insert(trails, t)
+	end
+
+	-- Handle trail fading locally to avoid tainting Blizzard's UIFrameFade
+	for i = 1, #trails do
+		local tr = trails[i]
+		if tr.fadeTimer then
+			tr.fadeTimer = tr.fadeTimer - elapsed
+			if tr.fadeTimer <= 0 then
+				tr.fadeTimer = nil
+				tr:SetAlpha(0)
+				tr:Hide()
+			else
+				tr:SetAlpha(tr.startAlpha * (tr.fadeTimer / trailFadeDuration))
+			end
+		end
 	end
 
 	lastX, lastY = x, y
