@@ -6,7 +6,7 @@ local optionsCategory
 
 -- Default Settings
 local defaultSettings = {
-	scale = 2.2,
+	scale = 3.6,
 	alpha = 1.0,
 	trail = true,
 	r = 1,
